@@ -16,15 +16,30 @@ export const useAppContext = () => {
   };
 
   const fetchData = async () => {
-    const { data } = await odontoApi.get();
-    dispatch({ type: 'ADD_DATA', payload: data });
+    try {
+      
+      dispatch({type: 'START_FETCH'});
+      const { data } = await odontoApi.get();
+      dispatch({ type: 'ADD_DATA', payload: data });
+      
+    } catch (error) {
+      
+      console.log(error)
+      throw new Error('No pudimos cargar la información. Intenta luego nuevamente.')
+      
+    }finally {
+      
+      dispatch({type: 'FINISH_FETCH'})
+      
+    }
+   
   };
 
-  const addFavorite = (data, favorites) => {
+  const addFavorite = (data) => {
     dispatch({ type: 'ADD_FAVORITE', payload: data });
   };
 
-  const removeFavorite = (id, favs) => {
+  const removeFavorite = (id) => {
     dispatch({ type: 'REMOVE_FAVORITE', payload: id });
   };
 

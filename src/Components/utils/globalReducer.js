@@ -27,6 +27,20 @@ export const globalReducer = (state, action) => {
         favorites: state.favorites.filter(fav => fav.id !== action.payload),
       };
     }
+    
+    case 'START_FETCH': {
+      return {
+        ...state,
+        isFetching: true
+      }
+    }
+    
+    case 'FINISH_FETCH': {
+      return {
+        ...state,
+        isFetching: false
+      }
+    }
 
     default: {
       throw new Error(`La accion de tipo ${action.type} no existe.`);

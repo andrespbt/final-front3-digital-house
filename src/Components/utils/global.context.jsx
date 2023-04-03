@@ -2,12 +2,11 @@ import { createContext, useMemo, useReducer } from 'react';
 import { globalReducer } from './globalReducer';
 
 export const initialState = {
+  isFetching: false,
   isDarkMode: false,
   data: [],
   favorites: JSON.parse(localStorage.getItem('odontoFavorites')) || [],
 };
-
-console.log(initialState.favorites)
 
 export const ContextGlobal = createContext(initialState);
 
