@@ -28,8 +28,10 @@ export const useAppContext = () => {
       throw new Error('No pudimos cargar la información. Intenta luego nuevamente.')
       
     }finally {
+      setTimeout(() => {
+        dispatch({type: 'FINISH_FETCH'})
+      }, 1000);
       
-      dispatch({type: 'FINISH_FETCH'})
       
     }
    

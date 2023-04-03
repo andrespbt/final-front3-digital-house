@@ -9,6 +9,8 @@
   --dark-gray: #3a3e42;
   --light-gray: #f1f1f1;
   --very-light-gray: #fafafa;
+  --skeleton-main: hsl(200, 20%, 80%);
+  --skeleton-secondary: hsl(200, 20%, 95%);
 }
 
 body {
@@ -39,6 +41,8 @@ a:hover {
   display: flex;
   height: 10vh;
   justify-content: space-around;
+  position: sticky;
+  top: 0;
 }
 
 .header__navbar {
@@ -99,7 +103,7 @@ a:hover {
 }
 
 .app__main__card_grid__card__image {
-  border-radius: 10px 10px 0;
+  border-radius: 10px 10px 0 0;
   height: 200px;
   width: 200px;
 }
@@ -124,7 +128,6 @@ a:hover {
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  
 }
 
 .app__main__skeleton_card_grid__card {
@@ -170,17 +173,21 @@ a:hover {
 
 @keyframes skeleton-loading {
   0% {
-    background-color: hsl(200, 20%, 80%);
+    background-color: var(--skeleton-main);
   }
   100% {
-    background-color: hsl(200, 20%, 95%);
+    background-color: var(--skeleton-secondary);
   }
 }
 
 /* Footer */
 
-footer {
+.app__footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 10vh;
+  font-weight: 600;
 }
 
 /* footer {

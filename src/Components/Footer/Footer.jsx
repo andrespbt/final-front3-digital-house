@@ -1,17 +1,15 @@
 import React from 'react';
-import logo from '../img/DH.ico';
+import logo from '../../img/DH.ico';
 
-const Footer = () => {
+export const Footer = ({themeClass}) => {
   return (
-    <footer>
+    <footer className={`app__footer ${themeClass}`}>
       <p>Powered by</p>
       <img
         style={{ width: '40px', marginLeft: '10px', height: '40px' }}
         src={logo}
         alt="DH-logo"
       />
-    </footer>
-  );
+      </footer>
+  )
 };
-
-export default Footer;
