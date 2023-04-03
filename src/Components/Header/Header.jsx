@@ -1,25 +1,27 @@
 import React from 'react';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ListIcon } from '../icons';
 import { MenuModal, Navbar } from './';
 
-export const Header = ({ isDarkMode }) => {
+export const Header = ({ themeClass }) => {
+  const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <header className={`${isDarkMode ? 'dark' : 'light'} app__header`}>
-      <h1 className="header__h1">DH Odonto</h1>
+    <header className={`${themeClass} app__header`}>
+      <h1 className="header__h1" onClick={() => navigate('/')}>DH Odonto</h1>
       <Navbar />
       <button
         className="header__button"
         onClick={() => setIsModalOpen(!isModalOpen)}
       >
-        <ListIcon isDarkMode={isDarkMode} />
+        <ListIcon themeClass={themeClass} />
       </button>
 
       {isModalOpen && (
         <MenuModal
-          isDarkMode={isDarkMode}
+          themeClass={themeClass}
           setIsModalOpen={setIsModalOpen}
         />
       )}

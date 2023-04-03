@@ -1,5 +1,5 @@
-export const ListIcon = ({ isDarkMode }) => {
-  const fillColor = isDarkMode ? '#fff' : '#000';
+export const ListIcon = ({ themeClass }) => {
+  const fillColor = themeClass === 'dark' ? '#fff' : '#000';
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

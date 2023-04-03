@@ -2,14 +2,12 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { ThemeButton } from './ThemeButton';
 
-export const MenuModal = ({ isDarkMode, setIsModalOpen }) => {
-  const themeColor = isDarkMode ? 'dark' : 'light';
-
+export const MenuModal = ({ themeClass, setIsModalOpen }) => {
   const onLinkClick = () => {
     setIsModalOpen(false);
   };
   return (
-    <div className={`header__menu_modal ${themeColor}`}>
+    <div className={`header__menu_modal ${themeClass}`}>
       <NavLink
         to="/home"
         onClick={onLinkClick}

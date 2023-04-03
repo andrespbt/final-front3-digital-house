@@ -1,6 +1,6 @@
-import { Outlet } from 'react-router-dom';
 import Footer from './Components/Footer';
 import { Header } from './Components/Header';
+import { Main } from './Components/Main/Main';
 import { useAppContext } from './hooks/useAppContext';
 
 function App() {
@@ -10,11 +10,8 @@ function App() {
 
   return (
     <div className="app">
-      <Header isDarkMode={isDarkMode} />
-
-      <main className="app__main">
-        <Outlet />
-      </main>
+      <Header themeClass={isDarkMode ? 'dark' : 'light'} />
+      <Main themeClass={isDarkMode ? 'mainDark' : 'mainLight'} />
 
       <footer className="app__footer">
         <Footer />

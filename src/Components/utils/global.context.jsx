@@ -1,7 +1,13 @@
 import { createContext, useMemo, useReducer } from 'react';
 import { globalReducer } from './globalReducer';
 
-export const initialState = { isDarkMode: false, data: [] };
+export const initialState = {
+  isDarkMode: false,
+  data: [],
+  favorites: JSON.parse(localStorage.getItem('odontoFavorites')) || [],
+};
+
+console.log(initialState.favorites)
 
 export const ContextGlobal = createContext(initialState);
 
@@ -10,5 +16,5 @@ export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(globalReducer, initialState);
   const value = useMemo(() => [state, dispatch], [state]);
 
-  return <ContextGlobal.Provider value={ value }>{children}</ContextGlobal.Provider>;
+  return <ContextGlobal.Provider value={value}>{children}</ContextGlobal.Provider>;
 };

@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import odontoApi from '../api/odontoApi';
 import { ContextGlobal } from '../Components/utils/global.context';
 
 export const useAppContext = () => {
@@ -14,9 +15,25 @@ export const useAppContext = () => {
     dispatch({ type: 'CHANGE_THEME' });
   };
 
+  const fetchData = async () => {
+    const { data } = await odontoApi.get();
+    dispatch({ type: 'ADD_DATA', payload: data });
+  };
+
+  const addFavorite = (data, favorites) => {
+    dispatch({ type: 'ADD_FAVORITE', payload: data });
+  };
+
+  const removeFavorite = (id, favs) => {
+    dispatch({ type: 'REMOVE_FAVORITE', payload: id });
+  };
+
   return {
-    state,
-    dispatch,
+    addFavorite,
     changeTheme,
+    dispatch,
+    fetchData,
+    removeFavorite,
+    state,
   };
 };

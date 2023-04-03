@@ -7,6 +7,8 @@
 :root {
   --very-dark-gray: #262b32;
   --dark-gray: #3a3e42;
+  --light-gray: #f1f1f1;
+  --very-light-gray: #fafafa;
 }
 
 body {
@@ -18,6 +20,16 @@ body {
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  margin: 5px;
+  cursor: pointer;
+}
+a:hover {
+  color: rgb(136, 136, 136);
 }
 
 /* Header */
@@ -43,10 +55,10 @@ code {
 
 .header__menu_modal {
   background-color: inherit;
-  border-radius: 0 0 5px 5px;
-  color: inherit;
+  border-radius: 0 0 0 5px;
   display: flex;
   flex-direction: column;
+  font-weight: 600;
   height: 150px;
   justify-content: space-between;
   padding: 5px 10px;
@@ -62,29 +74,55 @@ code {
   background-color: transparent;
 }
 
-/* Body */
+/* Main */
+
+.app__main {
+  min-height: 80vh;
+}
+
+.app__main__card-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.app__main__card_grid__card {
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 350px;
+}
+
+.app__main__card_grid__card__image {
+  border-radius: 10px 10px 0;
+  height: 200px;
+  width: 200px;
+}
+
+.app__main__card_grid__card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 5px;
+}
+
+.app__main__card_grid__card__fav_button {
+  border: none;
+  background-color: transparent;
+}
 
 /* Footer */
 
-.favButton {
-  background-color: rgba(136, 136, 136, 0.116);
-  padding: 10px;
-  border: none;
-  width: 100%;
-  cursor: pointer;
-}
-
-a {
-  color: #000;
-  text-decoration: none;
-  margin: 5px;
-  cursor: pointer;
-}
-a:hover {
-  color: rgb(136, 136, 136);
-}
-
 footer {
+  height: 10vh;
+}
+
+/* footer {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -94,27 +132,27 @@ footer {
   width: 90%;
   height: 40px;
   margin-top: 2rem;
-}
+} */
 
-footer > img {
+/* footer > img {
   width: 200px;
   margin: 0;
 }
 footer > p {
   margin: 0;
   padding-top: 0.7rem;
-}
+} */
 
-form {
+/* form {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   width: 300px;
   height: 100px;
   margin: 0 auto;
-}
+} */
 
-.card {
+/* .card {
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -136,8 +174,8 @@ form {
   height: auto;
   flex-wrap: wrap;
   margin: 0 auto;
-}
-
+} */
+/* 
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -155,7 +193,7 @@ th {
 
 tr:nth-child(even) {
   background-color: #dddddd;
-}
+} */
 
 /* Theme */
 
@@ -168,5 +206,14 @@ tr:nth-child(even) {
 }
 
 .light {
-  background-color: #f1f1f1;
+  background-color: var(--light-gray);
+}
+
+.mainDark {
+  background-color: var(--dark-gray);
+  color: white;
+}
+
+.mainLight {
+  background-color: var(--very-light-gray);
 }
