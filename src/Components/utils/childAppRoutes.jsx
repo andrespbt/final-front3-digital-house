@@ -22,7 +22,7 @@ export const childAppRoutes = [
     element: <Contact />,
   },
   {
-    path: 'dentist/:id',
+    path: 'dentist/:dentistId',
     element: <Detail />,
   },
   {

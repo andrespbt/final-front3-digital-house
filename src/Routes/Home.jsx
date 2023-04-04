@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Card from '../Components/Main/Card';
 import { GridCardSkeleton } from '../Components/Main/skeleton/GridCardSkeleton';
 import { useAppContext } from '../hooks/useAppContext';
@@ -8,12 +9,14 @@ import { useAppContext } from '../hooks/useAppContext';
 
 const Home = () => {
   const {
-    fetchData,
+    fetchAllUsers,
     state: { data, favorites, isFetching },
   } = useAppContext();
 
+  const navigate = useNavigate();
+
   useEffect(() => {
-    fetchData();
+    fetchAllUsers();
   }, []);
 
   useEffect(() => {
@@ -22,19 +25,21 @@ const Home = () => {
 
   return (
     <>
-      <div className="app__main__card-grid">
-        {
-          isFetching
-          ? 
-          <GridCardSkeleton />
-          : 
+      <div className="app__home__card-grid">
+        {isFetching ? (
+          <GridCardSkeleton  cardAmount={data.length}/>
+        ) : (
+          data.length > 1 &&
           data.map(user => (
-              <Card
-                data={user}
-                key={user.id}
-              />
+            <Card
+              data={user}
+              key={user.id}
+              onClick={() => navigate(`/dentist/${user.id}`)}
+              textArray={[{field: 'Name', value: user.name}, {field:'Username', value: user.username}]}
+              cardClass='app__home__card_grid__card'
+            />
           ))
-        }
+        )}
       </div>
     </>
   );

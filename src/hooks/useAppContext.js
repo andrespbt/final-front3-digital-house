@@ -6,7 +6,7 @@ export const useAppContext = () => {
   const context = useContext(ContextGlobal);
 
   if (!context) {
-    throw new Error(`useAppContext debe ser usado con ContextGlobal`);
+    throw new Error(`There is no context.`);
   }
 
   const [state, dispatch] = context;
@@ -15,33 +15,41 @@ export const useAppContext = () => {
     dispatch({ type: 'CHANGE_THEME' });
   };
 
-  const fetchData = async () => {
+  const fetchAllUsers = async () => {
     try {
-      
-      dispatch({type: 'START_FETCH'});
+      dispatch({ type: 'START_FETCH' });
       const { data } = await odontoApi.get();
       dispatch({ type: 'ADD_DATA', payload: data });
-      
     } catch (error) {
-      
-      console.log(error)
-      throw new Error('No pudimos cargar la información. Intenta luego nuevamente.')
-      
-    }finally {
+      console.log(error);
+      throw new Error('Server error. Try again later.');
+    } finally {
       setTimeout(() => {
-        dispatch({type: 'FINISH_FETCH'})
+        dispatch({ type: 'FINISH_FETCH' });
       }, 1000);
-      
-      
     }
-   
   };
 
-  const addFavorite = (data) => {
+  const fetchSingleUser = async id => {
+    try {
+      dispatch({ type: 'START_FETCH' });
+      const { data } = await odontoApi.get(`/${id}`);
+      dispatch({ type: 'ADD_DATA', payload: data });
+    } catch (error) {
+      console.log(error);
+      throw new Error('Server error. Try again later.');
+    } finally {
+      setTimeout(() => {
+        dispatch({ type: 'FINISH_FETCH' });
+      }, 1000);
+    }
+  };
+
+  const addFavorite = data => {
     dispatch({ type: 'ADD_FAVORITE', payload: data });
   };
 
-  const removeFavorite = (id) => {
+  const removeFavorite = id => {
     dispatch({ type: 'REMOVE_FAVORITE', payload: id });
   };
 
@@ -49,7 +57,8 @@ export const useAppContext = () => {
     addFavorite,
     changeTheme,
     dispatch,
-    fetchData,
+    fetchAllUsers,
+    fetchSingleUser,
     removeFavorite,
     state,
   };
