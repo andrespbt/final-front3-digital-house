@@ -15,7 +15,7 @@ export const useAppContext = () => {
     dispatch({ type: 'CHANGE_THEME' });
   };
 
-  const fetchAllUsers = async () => {
+  const fetchAllDentists = async () => {
     try {
       dispatch({ type: 'START_FETCH' });
       const { data } = await odontoApi.get();
@@ -30,7 +30,7 @@ export const useAppContext = () => {
     }
   };
 
-  const fetchSingleUser = async id => {
+  const fetchSingleDentist = async id => {
     try {
       dispatch({ type: 'START_FETCH' });
       const { data } = await odontoApi.get(`/${id}`);
@@ -46,6 +46,7 @@ export const useAppContext = () => {
   };
 
   const addFavorite = data => {
+    console.log(data);
     dispatch({ type: 'ADD_FAVORITE', payload: data });
   };
 
@@ -57,8 +58,8 @@ export const useAppContext = () => {
     addFavorite,
     changeTheme,
     dispatch,
-    fetchAllUsers,
-    fetchSingleUser,
+    fetchAllDentists,
+    fetchSingleDentist,
     removeFavorite,
     state,
   };

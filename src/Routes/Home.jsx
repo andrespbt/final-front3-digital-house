@@ -9,34 +9,33 @@ import { useAppContext } from '../hooks/useAppContext';
 
 const Home = () => {
   const {
-    fetchAllUsers,
-    state: { data, favorites, isFetching },
+    fetchAllDentists,
+    state: { data, isFetching },
   } = useAppContext();
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetchAllUsers();
+    fetchAllDentists();
   }, []);
-
-  useEffect(() => {
-    localStorage.setItem('odontoFavorites', JSON.stringify(favorites));
-  }, [favorites]);
 
   return (
     <>
       <div className="app__home__card-grid">
         {isFetching ? (
-          <GridCardSkeleton  cardAmount={data.length}/>
+          <GridCardSkeleton cardAmount={10} />
         ) : (
           data.length > 1 &&
-          data.map(user => (
+          data.map(dentist => (
             <Card
-              data={user}
-              key={user.id}
-              onClick={() => navigate(`/dentist/${user.id}`)}
-              textArray={[{field: 'Name', value: user.name}, {field:'Username', value: user.username}]}
-              cardClass='app__home__card_grid__card'
+              data={dentist}
+              key={dentist.id}
+              onClick={() => navigate(`/dentist/${dentist.id}`)}
+              textArray={[
+                { field: 'Name', value: dentist.name },
+                { field: 'Username', value: dentist.username },
+              ]}
+              cardClass="app__home__card_grid__card"
             />
           ))
         )}

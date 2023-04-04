@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
+import { LeftArrow } from '../Components/icons/LeftArrow';
 import Card from '../Components/Main/Card';
 import { GridCardSkeleton } from '../Components/Main/skeleton/GridCardSkeleton';
 import { useAppContext } from '../hooks/useAppContext';
@@ -10,36 +11,37 @@ const Detail = () => {
   // Consumiendo el parametro dinamico de la URL deberan hacer un fetch a un user en especifico
   const { dentistId } = useParams();
   const {
-    fetchSingleUser,
+    fetchSingleDentist,
     state: { data, isFetching },
   } = useAppContext();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    fetchSingleUser(dentistId);
+    fetchSingleDentist(dentistId);
   }, []);
 
   return (
-    <div className='app__detail__card-grid'>
+    <div className="app__detail__card-grid">
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
-      {
-        isFetching 
-        ? 
-        <GridCardSkeleton /> 
-        : 
+      <div onClick={() => navigate(-1)}>
+        <LeftArrow arrowClass="app__detail__card-grid__arrow" />
+      </div>
+      {isFetching ? (
+        <GridCardSkeleton />
+      ) : (
         <Card
-        data={data}
-        onClick={null}
-        textArray={[
-          { field: 'Name', value: data.name },
-          { field: 'Email', value: data.email },
-          { field: 'Phone', value: data.phone },
-          { field: 'Website', value: data.website },
-        ]}
-        cardClass="app__detail__card_grid__card"
-      />
-      }
-      
+          data={data}
+          onClick={null}
+          textArray={[
+            { field: 'Name', value: data.name },
+            { field: 'Email', value: data.email },
+            { field: 'Phone', value: data.phone },
+            { field: 'Website', value: data.website },
+          ]}
+          cardClass="app__detail__card_grid__card"
+        />
+      )}
     </div>
   );
 };

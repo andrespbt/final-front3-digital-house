@@ -34,6 +34,10 @@ a:hover {
   color: rgb(136, 136, 136);
 }
 
+.hidden {
+  display: none;
+}
+
 /* Header */
 
 .app__header {
@@ -136,6 +140,14 @@ a:hover {
   padding-bottom: 10px;
   width: 280px;
   height: 405px;
+}
+
+.app__detail__card-grid__arrow {
+  position: absolute;
+  top: 12vh;
+  left: 30px;
+  width: 45px;
+  height: 45px;
 }
 
 /* Main - Skeleton */

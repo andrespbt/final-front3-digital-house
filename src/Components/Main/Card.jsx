@@ -19,6 +19,7 @@ const Card = ({ data, onClick, textArray, cardClass }) => {
 
   const onFavButtonClick = e => {
     e.stopPropagation();
+
     if (!isFav) {
       addFavorite(data);
     } else {
