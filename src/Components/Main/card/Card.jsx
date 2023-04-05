@@ -1,11 +1,11 @@
 import React from 'react';
-import { useAppContext } from '../../hooks/useAppContext';
-import doctorImg from '../../img/doctor.jpg';
-import { HeartFillIcon } from '../icons/HeartFillIcon';
-import { HeartIcon } from '../icons/HeartIcon';
+import { useAppContext } from '../../../hooks/useAppContext';
+import doctorImg from '../../../img/doctor.jpg';
+import { HeartFillIcon } from '../../icons/HeartFillIcon';
+import { HeartIcon } from '../../icons/HeartIcon';
 import { CardTextContainer } from './CardTextContainer';
 
-const Card = ({ data, onClick, textArray, cardClass }) => {
+const Card = ({ data, onClick, textArray, cardClass, withLikeButton }) => {
   const { id } = data || '';
   const {
     state: { isDarkMode, favorites },
@@ -44,12 +44,17 @@ const Card = ({ data, onClick, textArray, cardClass }) => {
       <CardTextContainer textArray={textArray}  />
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      <button
+      
+      {
+        withLikeButton && 
+        <button
         onClick={onFavButtonClick}
         className="app__main__card_grid__card__fav_button"
       >
         {isFav ? <HeartFillIcon /> : <HeartIcon fill={isDarkMode ? 'white' : 'black'} />}
       </button>
+      }
+      
     </div>
   );
 };

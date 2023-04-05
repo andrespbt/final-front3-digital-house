@@ -1,4 +1,4 @@
-import {Footer} from './Components//Footer/Footer';
+import { Footer } from './Components//Footer/Footer';
 import { Header } from './Components/Header';
 import { Main } from './Components/Main/Main';
 import { useAppContext } from './hooks/useAppContext';
@@ -12,7 +12,7 @@ function App() {
     <div className="app">
       <Header themeClass={isDarkMode ? 'dark' : 'light'} />
       <Main themeClass={isDarkMode ? 'mainDark' : 'mainLight'} />
-      <Footer themeClass={isDarkMode ? 'dark' : 'light'}/>
+      <Footer themeClass={isDarkMode ? 'dark' : 'light'} />
     </div>
   );
 }

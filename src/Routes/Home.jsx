@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Card from '../Components/Main/Card';
+import Card from '../Components/Main/card/Card';
 import { GridCardSkeleton } from '../Components/Main/skeleton/GridCardSkeleton';
 import { useAppContext } from '../hooks/useAppContext';
 
@@ -36,6 +36,7 @@ const Home = () => {
                 { field: 'Username', value: dentist.username },
               ]}
               cardClass="app__home__card_grid__card"
+              withLikeButton={true}
             />
           ))
         )}

@@ -1,6 +1,7 @@
 export const globalReducer = (state, action) => {
   switch (action.type) {
     case 'CHANGE_THEME': {
+      
       return {
         ...state,
         isDarkMode: !state.isDarkMode,

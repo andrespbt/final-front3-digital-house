@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { LeftArrow } from '../Components/icons/LeftArrow';
-import Card from '../Components/Main/Card';
+import Card from '../Components/Main/card/Card';
 import { GridCardSkeleton } from '../Components/Main/skeleton/GridCardSkeleton';
 import { useAppContext } from '../hooks/useAppContext';
 
@@ -25,7 +25,7 @@ const Detail = () => {
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <div onClick={() => navigate(-1)}>
-        <LeftArrow arrowClass="app__detail__card-grid__arrow" />
+        <LeftArrow arrowClass="app__main__card-grid__arrow" />
       </div>
       {isFetching ? (
         <GridCardSkeleton />
@@ -40,6 +40,7 @@ const Detail = () => {
             { field: 'Website', value: data.website },
           ]}
           cardClass="app__detail__card_grid__card"
+          withLikeButton={true}
         />
       )}
     </div>

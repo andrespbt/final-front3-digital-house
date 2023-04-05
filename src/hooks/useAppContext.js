@@ -46,7 +46,6 @@ export const useAppContext = () => {
   };
 
   const addFavorite = data => {
-    console.log(data);
     dispatch({ type: 'ADD_FAVORITE', payload: data });
   };
 
