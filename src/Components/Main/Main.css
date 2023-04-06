@@ -22,6 +22,9 @@
 .app__main__card_grid__card__fav_button {
   border: none;
   background-color: transparent;
+  width: 20px;
+  height: 20px;
+  margin: 0 auto;
 }
 
 .app__main__card_grid__card__fav_button:hover {
@@ -209,9 +212,9 @@
 }
 
 .app__main__skeleton_card_grid__card__image {
+  width: inherit;
   border-radius: 10px 10px 0 0;
   height: 200px;
-  width: 200px;
 }
 
 .app__main__skeleton_card_grid__card__text {
@@ -247,7 +250,7 @@
   }
 }
 
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .app__home__card-grid {
     flex-direction: row;
     flex-wrap: wrap;
@@ -260,5 +263,135 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  /*  Main */
+  .app__main {
+    min-height: 78vh;
+    font-size: 1.1rem;
+  }
+
+  .app__home__card-grid {
+    padding: 3rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .app__main__card-grid__arrow {
+    position: absolute;
+    top: 13vh;
+    left: 30px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .app__home__card_grid__card {
+    width: 220px;
+    height: 380px;
+  }
+
+  .app__main__card_grid__card__fav_button {
+    width: 25px;
+    height: 25px;
+  }
+
+  /* Skeleton */
+
+  .app__main__skeleton_card_grid {
+    padding: 0;
+  }
+
+  .app__main__skeleton_card_grid__card {
+    width: 220px;
+    height: 380px;
+  }
+
+  /* Contact */
+
+  .app__contact__container {
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  .app__contact__text {
+    font-size: 1.2rem;
+  }
+
+  .app__contact__text__h2 {
+    font-size: 2.3rem;
+  }
+
+  .app__contact__form {
+    font-size: 1.2rem;
+    width: 400px;
+  }
+
+  .app__contact__form__legend {
+    font-size: 1.4rem;
+  }
+
+  .app__home__card-grid__empty_message {
+    font-size: 1.4rem;
+  }
+
+  .app__contact__form__input_error_message {
+    font-size: 14px;
+  }
+
+  .app__contact__form__error_message {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Home */
+  .app__home__card-grid {
+    gap: 4rem;
+    max-width: 1300px;
+    margin: 2rem 0;
+  }
+
+  .app__main__skeleton_card_grid {
+    max-width: 1300px;
+    gap: 3rem;
+    padding: 0;
+  }
+
+  .app__main {
+    min-height: 78vh;
+    font-size: 1.1rem;
+  }
+
+  .app__main__card-grid__arrow {
+    position: absolute;
+    top: 14vh;
+    left: 30px;
+    width: 45px;
+    height: 45px;
+  }
+
+  /* Contact */
+
+  .app__contact__container {
+    margin: 0;
+    margin-bottom: 2rem;
+    gap: 1.3rem;
+  }
+
+  .app__contact__text {
+    font-size: 1.1rem;
+  }
+
+  .app__contact__text__h2 {
+    font-size: 2rem;
+  }
+
+  .app__contact__form {
+    font-size: 1.2rem;
+    width: 400px;
+  }
+
+  .app__contact__form__input {
+    font-size: 1rem;
   }
 }

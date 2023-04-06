@@ -36,7 +36,7 @@ const Favs = () => {
               />
             ))
           ) : (
-            <p>You dont have any favorite dentist.</p>
+            <p className="app__home__card-grid__empty_message">You dont have any favorite dentist.</p>
           )}
         </div>
       </div>

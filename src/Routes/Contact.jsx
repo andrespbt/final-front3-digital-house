@@ -26,12 +26,12 @@ const Contact = () => {
           <div className="app__contact__text_success">
             <CheckCircleFillIcon />
             <h2>Thanks {formValues.name.value}</h2>
-            <p>We will contact you soon, through email.</p>
+            <p className="app__home__card-grid__empty_message">We will contact you soon by email.</p>
           </div>
         ) : (
           <>
             <div className="app__contact__text">
-              <h2>Want to know more?</h2>
+              <h2 className="app__contact__text__h2">Want to know more?</h2>
               <p>Send us your questions and we will contact you</p>
             </div>
 

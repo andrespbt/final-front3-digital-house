@@ -44,19 +44,66 @@
   color: inherit;
 }
 
-.header__menu_modal__button,
-.header__menu_modal__button:hover {
+.header__menu_modal__button {
   border: none;
   background-color: transparent;
+  height: 16px;
+  width: 16px;
+}
+
+.header__menu_modal__button:hover {
   cursor: pointer;
 }
 
-@media (min-width: 640px) and (max-width: 767px) {
+@media (min-width: 640px) {
   .header__button {
     display: none;
   }
 
   .header__navbar {
     display: flex;
+  }
+
+  .header__menu_modal {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .app__header {
+    height: 12vh;
+  }
+
+  .app__header {
+    font-size: 1.3rem;
+  }
+
+  .header__menu_modal__button {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .app__header {
+    height: 12vh;
+  }
+
+  .header__h1 {
+    font-size: 2.5rem;
+  }
+
+  .app__header {
+    font-size: 1.4rem;
+  }
+
+  .header__menu_modal__button {
+    height: 25px;
+    width: 25px;
+    margin-top: 4px;
+  }
+
+  .header__navbar {
+    gap: 1.4rem;
   }
 }

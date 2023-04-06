@@ -1,11 +1,9 @@
 import React from 'react';
 
-export const HeartIcon = ({fill}) => {
+export const HeartIcon = ({ fill }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
       fill={fill}
       className="bi bi-heart"
       viewBox="0 0 16 16"
