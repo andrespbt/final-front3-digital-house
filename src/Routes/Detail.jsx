@@ -40,7 +40,6 @@ const Detail = () => {
             { field: 'Website', value: data.website },
           ]}
           cardClass="app__detail__card_grid__card"
-          withLikeButton={true}
         />
       )}
     </div>

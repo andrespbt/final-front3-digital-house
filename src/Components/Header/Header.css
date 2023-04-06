@@ -1,0 +1,62 @@
+.app__header {
+  align-items: center;
+  display: flex;
+  height: 10vh;
+  justify-content: space-around;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header__h1:hover {
+  cursor: pointer;
+}
+
+.header__button {
+  border: none;
+  background-color: transparent;
+}
+
+.header__menu_modal {
+  background-color: inherit;
+  border-radius: 0 0 0 5px;
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  height: 150px;
+  justify-content: space-between;
+  padding: 5px 10px;
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  width: 50%;
+  z-index: 100;
+}
+
+.header__navbar {
+  justify-content: space-between;
+  display: none;
+  gap: 1.2rem;
+  font-weight: 700;
+}
+
+.header__navbar a {
+  color: inherit;
+}
+
+.header__menu_modal__button,
+.header__menu_modal__button:hover {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .header__button {
+    display: none;
+  }
+
+  .header__navbar {
+    display: flex;
+  }
+}

@@ -5,7 +5,7 @@ import { HeartFillIcon } from '../../icons/HeartFillIcon';
 import { HeartIcon } from '../../icons/HeartIcon';
 import { CardTextContainer } from './CardTextContainer';
 
-const Card = ({ data, onClick, textArray, cardClass, withLikeButton }) => {
+const Card = ({ data, onClick, textArray, cardClass }) => {
   const { id } = data || '';
   const {
     state: { isDarkMode, favorites },
@@ -41,20 +41,16 @@ const Card = ({ data, onClick, textArray, cardClass, withLikeButton }) => {
         alt="doctor"
       />
 
-      <CardTextContainer textArray={textArray}  />
+      <CardTextContainer textArray={textArray} />
 
       {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-      
-      {
-        withLikeButton && 
-        <button
+
+      <button
         onClick={onFavButtonClick}
         className="app__main__card_grid__card__fav_button"
       >
         {isFav ? <HeartFillIcon /> : <HeartIcon fill={isDarkMode ? 'white' : 'black'} />}
       </button>
-      }
-      
     </div>
   );
 };

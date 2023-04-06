@@ -36,7 +36,6 @@ const Home = () => {
                 { field: 'Username', value: dentist.username },
               ]}
               cardClass="app__home__card_grid__card"
-              withLikeButton={true}
             />
           ))
         )}

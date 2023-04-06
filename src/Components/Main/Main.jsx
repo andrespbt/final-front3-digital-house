@@ -1,20 +1,21 @@
-import React from 'react'
+import React from 'react';
 import { useEffect } from 'react';
-import { Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom';
 import { useAppContext } from '../../hooks/useAppContext';
+import styles from './Main.css';
 
-export const Main = ({themeClass}) => {
-  
-  const { state: {favorites} } = useAppContext()
-  
+export const Main = ({ themeClass }) => {
+  const {
+    state: { favorites },
+  } = useAppContext();
+
   useEffect(() => {
     localStorage.setItem('odontoFavorites', JSON.stringify(favorites));
   }, [favorites]);
-    
-    
+
   return (
     <main className={`app__main ${themeClass}`}>
-        <Outlet themeClass={themeClass} />
+      <Outlet themeClass={themeClass} />
     </main>
-  )
-}
+  );
+};

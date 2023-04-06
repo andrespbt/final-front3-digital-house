@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LeftArrow } from '../Components/icons/LeftArrow';
 import Card from '../Components/Main/card/Card';
+import { useAppContext } from '../hooks/useAppContext';
 
 //Este componente debera ser estilado como "dark" o "light" dependiendo del theme del Context
 
 const Favs = () => {
-  const favorites = JSON.parse(localStorage.getItem('odontoFavorites'));
+  const {
+    state: { favorites },
+  } = useAppContext();
 
   const navigate = useNavigate();
 
@@ -29,8 +32,7 @@ const Favs = () => {
                   { field: 'Name', value: dentist.name },
                   { field: 'Username', value: dentist.username },
                 ]}
-                cardClass="app__favs__card_grid__card"
-                withLikeButton={false}
+                cardClass="app__home__card_grid__card"
               />
             ))
           ) : (
