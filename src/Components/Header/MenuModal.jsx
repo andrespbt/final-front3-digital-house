@@ -7,7 +7,7 @@ export const MenuModal = ({ themeClass, setIsModalOpen }) => {
     setIsModalOpen(false);
   };
   return (
-    <div className={`header__menu_modal ${themeClass}`}>
+    <div className={`menu-modal ${themeClass}`}>
       <NavLink
         to="/home"
         onClick={onLinkClick}

@@ -16,12 +16,12 @@ const Favs = () => {
   return (
     <>
       <div onClick={() => navigate(-1)}>
-        <LeftArrow arrowClass="app__main__card-grid__arrow" />
+        <LeftArrow arrowClass="card-grid__arrow" />
       </div>
       <div className="card-grid">
         {/* este componente debe consumir los destacados del localStorage */}
         {/* Deberan renderizar una Card por cada uno de ellos */}
-        <div className="app__home__card-grid">
+        <div className="card-grid">
           {favorites.length > 0 ? (
             favorites.map(dentist => (
               <Card
@@ -32,11 +32,11 @@ const Favs = () => {
                   { field: 'Name', value: dentist.name },
                   { field: 'Username', value: dentist.username },
                 ]}
-                cardClass="app__home__card_grid__card"
+                cardClass="card"
               />
             ))
           ) : (
-            <p className="app__home__card-grid__empty_message">You dont have any favorite dentist.</p>
+            <p className="card-grid__empty-message">You dont have any favorite dentist.</p>
           )}
         </div>
       </div>

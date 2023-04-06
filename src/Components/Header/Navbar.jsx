@@ -7,7 +7,7 @@ import { ThemeButton } from './ThemeButton';
 export const Navbar = () => {
   return (
     <>
-      <nav className="header__navbar">
+      <nav className="navbar">
         {/* Aqui deberan agregar los liks correspondientes a las rutas definidas */}
         <NavLink to="/home">Home</NavLink>
         <NavLink to="/contact">Contact</NavLink>

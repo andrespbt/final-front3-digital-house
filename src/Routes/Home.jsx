@@ -21,7 +21,7 @@ const Home = () => {
 
   return (
     <>
-      <div className="app__home__card-grid">
+      <div className="card-grid">
         {isFetching ? (
           <GridCardSkeleton cardAmount={10} />
         ) : (
@@ -35,7 +35,7 @@ const Home = () => {
                 { field: 'Name', value: dentist.name },
                 { field: 'Username', value: dentist.username },
               ]}
-              cardClass="app__home__card_grid__card"
+              cardClass="card"
             />
           ))
         )}

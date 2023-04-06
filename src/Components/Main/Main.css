@@ -1,4 +1,4 @@
-.app__main {
+.main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,20 +6,20 @@
   min-height: 80vh;
 }
 
-.app__main__card_grid__card__image {
+.card__image {
   border-radius: 10px 10px 0 0;
   height: 200px;
   width: inherit;
 }
 
-.app__main__card_grid__card__text {
+.card__text {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0 5px;
 }
 
-.app__main__card_grid__card__fav_button {
+.card__fav-button {
   border: none;
   background-color: transparent;
   width: 20px;
@@ -27,11 +27,11 @@
   margin: 0 auto;
 }
 
-.app__main__card_grid__card__fav_button:hover {
+.card__fav-button:hover {
   cursor: pointer;
 }
 
-.app__main__card-grid__arrow {
+.card-grid__arrow {
   position: absolute;
   top: 12vh;
   left: 30px;
@@ -39,13 +39,13 @@
   height: 30px;
 }
 
-.app__main__card-grid__arrow:hover {
+.card-grid__arrow:hover {
   cursor: pointer;
 }
 
 /* Home */
 
-.app__home__card-grid {
+.card-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -53,7 +53,7 @@
   padding: 2rem 1rem;
 }
 
-.app__home__card_grid__card {
+.card {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -63,13 +63,13 @@
   height: 350px;
 }
 
-.app__home__card_grid__card {
+.card {
   cursor: pointer;
 }
 
 /* Detail */
 
-.app__detail__card_grid__card {
+.card--detail {
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -81,17 +81,17 @@
 
 /* Favs */
 
-.app__favs__card_grid__card div {
+.card--favs div {
   margin-top: 2rem;
 }
 
 /* Contact */
 
-.app__contact__text {
+.contact-text {
   text-align: center;
 }
 
-.app__contact__text_success {
+.contact-text--success {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -100,7 +100,7 @@
   align-items: center;
 }
 
-.app__contact__container {
+.contact-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -108,7 +108,7 @@
   gap: 2rem;
 }
 
-.app__contact__form {
+.form {
   /* margin-top: 4rem; */
   border-radius: 15px;
   height: fit-content;
@@ -116,7 +116,7 @@
   padding: 2rem;
 }
 
-.app__contact__form__fieldset {
+.form__fieldset {
   border: none;
   text-align: center;
   font-weight: 700;
@@ -125,11 +125,11 @@
   gap: 1rem;
 }
 
-.app__contact__form__input_container {
+.input-container {
   position: relative;
 }
 
-.app__contact__form__input {
+.form__input {
   display: block;
   width: 100%;
   border-radius: 15px;
@@ -137,11 +137,11 @@
   padding: 0.5rem;
 }
 
-.app__contact__form__input:focus {
+.form__input:focus {
   outline: none;
 }
 
-.app__contact__form__submit {
+.form__submit {
   display: block;
   margin: 2rem auto 0 auto;
   width: 60%;
@@ -150,24 +150,24 @@
   border: 0.1px solid;
 }
 
-.app__contact__form__submit:hover {
+.form__submit:hover {
   cursor: pointer;
 }
 
-.app__contact__form__label {
+.form__label {
   text-align: left;
 }
 
-.app__contact__form__legend {
+.form__legend {
   margin-bottom: 20px;
 }
 
-.app__contact__form__input_error_message {
+.form__error-message--input {
   color: red;
   font-size: 12px;
 }
 
-.app__contact__form__error_message {
+.form__error-message {
   display: block;
   margin-top: 1rem;
   text-align: center;
@@ -176,15 +176,15 @@
   font-size: 12px;
 }
 
-.app__contact__form__input_error {
+.form__input--error {
   border: 1px solid red;
 }
 
-.app__contact__form__input_success {
+.form__input--success {
   border: 1px solid var(--success-green);
 }
 
-.app__contact__form__input__icon {
+.form__input-icon {
   position: absolute;
   top: 8px;
   right: 15px;
@@ -192,7 +192,7 @@
 
 /* Main - Skeleton */
 
-.app__main__skeleton_card_grid {
+.skeleton-grid {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -200,7 +200,7 @@
   padding: 1rem;
 }
 
-.app__main__skeleton_card_grid__card {
+.skeleton-card {
   background-color: #f1f1f1;
   border-radius: 10px;
   display: flex;
@@ -211,26 +211,26 @@
   height: 350px;
 }
 
-.app__main__skeleton_card_grid__card__image {
+.skeleton-card__image {
   width: inherit;
   border-radius: 10px 10px 0 0;
   height: 200px;
 }
 
-.app__main__skeleton_card_grid__card__text {
+.skeleton-card__text {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 0 5px;
 }
 
-.app__main__skeleton_card_grid__card__text__span {
+.skeleton-text__span {
   height: 20px;
   width: 90%;
   border-radius: 10px;
 }
 
-.app__main__skeleton_card_grid__card__button {
+.skeleton-card__button {
   height: 20px;
   width: 20px;
   margin: 0 auto;
@@ -251,14 +251,14 @@
 }
 
 @media (min-width: 640px) {
-  .app__home__card-grid {
+  .card-grid {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
   }
 
-  .app__main__skeleton_card_grid {
+  .skeleton-grid {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -268,17 +268,17 @@
 
 @media (min-width: 768px) and (max-width: 1199px) {
   /*  Main */
-  .app__main {
+  .main {
     min-height: 78vh;
     font-size: 1.1rem;
   }
 
-  .app__home__card-grid {
+  .card-grid {
     padding: 3rem 1rem;
     margin-top: 1rem;
   }
 
-  .app__main__card-grid__arrow {
+  .card-grid__arrow {
     position: absolute;
     top: 13vh;
     left: 30px;
@@ -286,83 +286,83 @@
     height: 40px;
   }
 
-  .app__home__card_grid__card {
+  .card {
     width: 220px;
     height: 380px;
   }
 
-  .app__main__card_grid__card__fav_button {
+  .card__fav-button {
     width: 25px;
     height: 25px;
   }
 
   /* Skeleton */
 
-  .app__main__skeleton_card_grid {
+  .skeleton-grid {
     padding: 0;
   }
 
-  .app__main__skeleton_card_grid__card {
+  .skeleton-card {
     width: 220px;
     height: 380px;
   }
 
   /* Contact */
 
-  .app__contact__container {
+  .contact-container {
     margin: 0;
     margin-bottom: 2rem;
   }
-  .app__contact__text {
+  .contact-text {
     font-size: 1.2rem;
   }
 
-  .app__contact__text__h2 {
+  .contact-text__h2 {
     font-size: 2.3rem;
   }
 
-  .app__contact__form {
+  .form {
     font-size: 1.2rem;
     width: 400px;
   }
 
-  .app__contact__form__legend {
+  .form__legend {
     font-size: 1.4rem;
   }
 
-  .app__home__card-grid__empty_message {
+  .card-grid__empty-message {
     font-size: 1.4rem;
   }
 
-  .app__contact__form__input_error_message {
+  .form__error-message--input {
     font-size: 14px;
   }
 
-  .app__contact__form__error_message {
+  .form__error-message {
     font-size: 14px;
   }
 }
 
 @media (min-width: 1200px) {
   /* Home */
-  .app__home__card-grid {
+  .card-grid {
     gap: 4rem;
     max-width: 1300px;
     margin: 2rem 0;
   }
 
-  .app__main__skeleton_card_grid {
+  .skeleton-grid {
     max-width: 1300px;
     gap: 3rem;
     padding: 0;
   }
 
-  .app__main {
+  .main {
     min-height: 78vh;
     font-size: 1.1rem;
   }
 
-  .app__main__card-grid__arrow {
+  .card-grid__arrow {
     position: absolute;
     top: 14vh;
     left: 30px;
@@ -372,26 +372,26 @@
 
   /* Contact */
 
-  .app__contact__container {
+  .contact-container {
     margin: 0;
     margin-bottom: 2rem;
     gap: 1.3rem;
   }
 
-  .app__contact__text {
+  .contact-text {
     font-size: 1.1rem;
   }
 
-  .app__contact__text__h2 {
+  .contact-text__h2 {
     font-size: 2rem;
   }
 
-  .app__contact__form {
+  .form__input {
     font-size: 1.2rem;
     width: 400px;
   }
 
-  .app__contact__form__input {
+  .form__input {
     font-size: 1rem;
   }
 }

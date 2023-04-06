@@ -10,7 +10,7 @@ export const Header = ({ themeClass }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-    <header className={`${themeClass} app__header`}>
+    <header className={`${themeClass} header`}>
       <h1
         className="header__h1"
         onClick={() => navigate('/')}

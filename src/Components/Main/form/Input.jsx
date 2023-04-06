@@ -5,7 +5,7 @@ export const Input = ({ inputClass, onChange, type, id, name, value, placeholder
   const icon = isErrors !== null && isErrors ? <XCircleIcon /> : <CheckCircleIcon />;
   return (
     <>
-      <div className="app__contact__form__input_container">
+      <div className="input-container">
         <input
           className={inputClass}
           onChange={onChange}

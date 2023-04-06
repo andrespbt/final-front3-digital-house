@@ -1,4 +1,4 @@
-.app__footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,7 +7,7 @@
 }
 
 @media (min-width: 768px) {
-  .app_footer__p {
+  .footer__p {
     font-size: 1.2rem;
   }
 }

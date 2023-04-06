@@ -14,7 +14,7 @@ export const Main = ({ themeClass }) => {
   }, [favorites]);
 
   return (
-    <main className={`app__main ${themeClass}`}>
+    <main className={`main ${themeClass}`}>
       <Outlet themeClass={themeClass} />
     </main>
   );

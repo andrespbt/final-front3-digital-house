@@ -25,7 +25,7 @@ const Detail = () => {
       {/* aqui deberan renderizar la informacion en detalle de un user en especifico */}
       {/* Deberan mostrar el name - email - phone - website por cada user en especifico */}
       <div onClick={() => navigate(-1)}>
-        <LeftArrow arrowClass="app__main__card-grid__arrow" />
+        <LeftArrow arrowClass="card-grid__arrow" />
       </div>
       {isFetching ? (
         <GridCardSkeleton />
@@ -39,7 +39,7 @@ const Detail = () => {
             { field: 'Phone', value: data.phone },
             { field: 'Website', value: data.website },
           ]}
-          cardClass="app__detail__card_grid__card"
+          cardClass="card--detail"
         />
       )}
     </div>

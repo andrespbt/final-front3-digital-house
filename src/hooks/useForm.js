@@ -13,7 +13,7 @@ export const useForm = ({ formValues, setFormValues }) => {
             ...formValues['name'],
             value,
             errors: false,
-            validationClass: 'app__contact__form__input_success',
+            validationClass: 'form__input--success',
           },
         });
       }
@@ -28,7 +28,7 @@ export const useForm = ({ formValues, setFormValues }) => {
             ...formValues['email'],
             value,
             errors: false,
-            validationClass: 'app__contact__form__input_success',
+            validationClass: 'form__input--success',
           },
         });
       }
@@ -46,7 +46,7 @@ export const useForm = ({ formValues, setFormValues }) => {
           name: {
             ...formValues['name'],
             errors: 'The name must be more than 5 characters long.',
-            validationClass: 'app__contact__form__input_error',
+            validationClass: 'form__input--error',
           },
         });
         return;
@@ -63,7 +63,7 @@ export const useForm = ({ formValues, setFormValues }) => {
           email: {
             ...formValues['email'],
             errors: 'The email is invalid.',
-            validationClass: 'app__contact__form__input_error',
+            validationClass: 'form__input--error',
           },
         });
         return;

@@ -1,4 +1,4 @@
-.app__header {
+.header {
   align-items: center;
   display: flex;
   height: 10vh;
@@ -17,7 +17,7 @@
   background-color: transparent;
 }
 
-.header__menu_modal {
+.menu-modal {
   background-color: inherit;
   border-radius: 0 0 0 5px;
   display: flex;
@@ -33,25 +33,26 @@
   z-index: 100;
 }
 
-.header__navbar {
+.navbar {
   justify-content: space-between;
   display: none;
   gap: 1.2rem;
   font-weight: 700;
 }
 
-.header__navbar a {
+.navbar a {
   color: inherit;
 }
 
-.header__menu_modal__button {
+.menu-modal__button {
   border: none;
   background-color: transparent;
   height: 16px;
   width: 16px;
+  margin: 0 auto 10px;
 }
 
-.header__menu_modal__button:hover {
+.menu-modal__button:hover {
   cursor: pointer;
 }
 
@@ -60,32 +61,32 @@
     display: none;
   }
 
-  .header__navbar {
+  .navbar {
     display: flex;
   }
 
-  .header__menu_modal {
+  .menu-modal {
     display: none;
   }
 }
 
 @media (min-width: 768px) and (max-width: 1199px) {
-  .app__header {
+  .header {
     height: 12vh;
   }
 
-  .app__header {
+  .header {
     font-size: 1.3rem;
   }
 
-  .header__menu_modal__button {
+  .menu-modal__button {
     height: 25px;
     width: 25px;
   }
 }
 
 @media (min-width: 1200px) {
-  .app__header {
+  .header {
     height: 12vh;
   }
 
@@ -93,17 +94,17 @@
     font-size: 2.5rem;
   }
 
-  .app__header {
+  .header {
     font-size: 1.4rem;
   }
 
-  .header__menu_modal__button {
+  .menu-modal__button {
     height: 25px;
     width: 25px;
     margin-top: 4px;
   }
 
-  .header__navbar {
+  .navbar {
     gap: 1.4rem;
   }
 }

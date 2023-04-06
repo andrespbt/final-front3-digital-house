@@ -36,7 +36,7 @@ const Card = ({ data, onClick, textArray, cardClass }) => {
       {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
 
       <img
-        className="app__main__card_grid__card__image"
+        className="card__image"
         src={doctorImg}
         alt="doctor"
       />
@@ -47,7 +47,7 @@ const Card = ({ data, onClick, textArray, cardClass }) => {
 
       <button
         onClick={onFavButtonClick}
-        className="app__main__card_grid__card__fav_button"
+        className="card__fav-button"
       >
         {isFav ? <HeartFillIcon /> : <HeartIcon fill={isDarkMode ? 'white' : 'black'} />}
       </button>

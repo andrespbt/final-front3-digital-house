@@ -7,7 +7,7 @@ export const CheckCircleIcon = () => {
       width="16"
       height="16"
       fill="#03C503"
-      className="app__contact__form__input__icon"
+      className="form__input-icon"
       viewBox="0 0 16 16"
     >
       <path d="M8 15A7 7 0 118 1a7 7 0 010 14zm0 1A8 8 0 108 0a8 8 0 000 16z"></path>

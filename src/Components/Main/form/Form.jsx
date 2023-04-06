@@ -15,18 +15,18 @@ const Form = ({ formValues, setFormValues }) => {
 
   return (
     <form
-      className={`app__contact__form ${formThemeClass}`}
+      className={`form ${formThemeClass}`}
       onSubmit={onFormSubmit}
     >
-      <fieldset className="app__contact__form__fieldset">
-        <legend className="app__contact__form__legend">Contact information</legend>
+      <fieldset className="form__fieldset">
+        <legend className="form__legend">Contact information</legend>
         <Label
-          labelClass="app__contact__form__label"
+          labelClass="form__label"
           htmlFor="name"
           text="Name"
         />
         <Input
-          inputClass={`app__contact__form__input ${formValues.name.validationClass}`}
+          inputClass={`form__input ${formValues.name.validationClass}`}
           onChange={onInputChange}
           type="text"
           id="name"
@@ -36,17 +36,15 @@ const Form = ({ formValues, setFormValues }) => {
           onBlur={onInputBlur}
           isErrors={formValues.name.errors}
         />
-        {formValues.name.errors && (
-          <span className="app__contact__form__input_error_message">{formValues.name.errors}</span>
-        )}
+        {formValues.name.errors && <span className="form__error-message--input">{formValues.name.errors}</span>}
 
         <Label
-          labelClass="app__contact__form__label"
+          labelClass="form__label"
           htmlFor="email"
           text="Email"
         />
         <Input
-          inputClass={`app__contact__form__input ${formValues.email.validationClass}`}
+          inputClass={`form__input ${formValues.email.validationClass}`}
           onChange={onInputChange}
           type="email"
           id="email"
@@ -56,12 +54,10 @@ const Form = ({ formValues, setFormValues }) => {
           onBlur={onInputBlur}
           isErrors={formValues.email.errors}
         />
-        {formValues.email.errors && (
-          <span className="app__contact__form__input_error_message">{formValues.email.errors}</span>
-        )}
+        {formValues.email.errors && <span className="form__error-message--input">{formValues.email.errors}</span>}
       </fieldset>
       <Input
-        inputClass={`${submitInputThemeClass} app__contact__form__submit`}
+        inputClass={`${submitInputThemeClass} form__submit`}
         type="submit"
         value="Submit"
         isErrors={null}
@@ -69,7 +65,7 @@ const Form = ({ formValues, setFormValues }) => {
       />
 
       {formValues.isFormSubmitted && !formValues.isSuccess && (
-        <span className="app__contact__form__error_message">Please check your information again.</span>
+        <span className="form__error-message">Please check your information again.</span>
       )}
     </form>
   );

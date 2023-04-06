@@ -18,20 +18,20 @@ const Contact = () => {
 
   return (
     <>
-      <div className="app__contact__container">
+      <div className="contact-container">
         <div onClick={() => navigate(-1)}>
-          <LeftArrow arrowClass="app__main__card-grid__arrow" />
+          <LeftArrow arrowClass="card-grid__arrow" />
         </div>
         {formValues.isSuccess ? (
-          <div className="app__contact__text_success">
+          <div className="contact-text--success">
             <CheckCircleFillIcon />
             <h2>Thanks {formValues.name.value}</h2>
-            <p className="app__home__card-grid__empty_message">We will contact you soon by email.</p>
+            <p className="card-grid__empty-message">We will contact you soon by email.</p>
           </div>
         ) : (
           <>
-            <div className="app__contact__text">
-              <h2 className="app__contact__text__h2">Want to know more?</h2>
+            <div className="contact-text">
+              <h2 className="contact-text__h2">Want to know more?</h2>
               <p>Send us your questions and we will contact you</p>
             </div>
 
