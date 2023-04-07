@@ -1,6 +1,5 @@
 export const useForm = ({ formValues, setFormValues }) => {
   const onInputChange = e => {
-    console.log(e.target.name);
     const value = e.target?.value;
     const name = e.target?.name;
     setFormValues({ ...formValues, [name]: { ...formValues[name], value } });
