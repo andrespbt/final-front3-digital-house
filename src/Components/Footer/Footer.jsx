@@ -1,6 +1,5 @@
 import React from 'react';
 import logo from '../../img/DH.ico';
-import styles from './Footer.css';
 
 export const Footer = ({ themeClass }) => {
   return (

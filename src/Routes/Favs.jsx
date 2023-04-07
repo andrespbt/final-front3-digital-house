@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { LeftArrow } from '../Components/icons/LeftArrow';
 import Card from '../Components/Main/card/Card';

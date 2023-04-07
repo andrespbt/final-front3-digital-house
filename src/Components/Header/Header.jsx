@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ListIcon } from '../icons';
 import { MenuModal, Navbar } from './';
-import styles from './Header.css';
+// import styles from './Header.css';
 
 export const Header = ({ themeClass }) => {
   const navigate = useNavigate();
@@ -14,6 +14,7 @@ export const Header = ({ themeClass }) => {
       <h1
         className="header__h1"
         onClick={() => navigate('/')}
+        aria-label="h1"
       >
         DH Odonto
       </h1>

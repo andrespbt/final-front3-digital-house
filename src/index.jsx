@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
-import { createBrowserRouter, RouterProvider, useLocation } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { childAppRoutes } from './Components/utils/childAppRoutes';
 import { ContextProvider } from './Components/utils/global.context';
 
@@ -13,7 +13,6 @@ const router = createBrowserRouter([
     children: childAppRoutes,
   },
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

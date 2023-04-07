@@ -10,8 +10,9 @@ export const ThemeButton = () => {
 
   return (
     <button
-      className="menu-modal__button"
+      className="menu-modal__theme-button"
       onClick={changeTheme}
+      aria-label="themeButton"
     >
       {isDarkMode ? <SunIcon /> : <MoonIcon />}
     </button>

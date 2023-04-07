@@ -44,7 +44,7 @@
   color: inherit;
 }
 
-.menu-modal__button {
+.menu-modal__theme-button {
   border: none;
   background-color: transparent;
   height: 16px;
@@ -52,7 +52,7 @@
   margin: 0 auto 10px;
 }
 
-.menu-modal__button:hover {
+.menu-modal__theme-button:hover {
   cursor: pointer;
 }
 
@@ -79,7 +79,7 @@
     font-size: 1.3rem;
   }
 
-  .menu-modal__button {
+  .menu-modal__theme-button {
     height: 25px;
     width: 25px;
   }
@@ -98,7 +98,7 @@
     font-size: 1.4rem;
   }
 
-  .menu-modal__button {
+  .menu-modal__theme-button {
     height: 25px;
     width: 25px;
     margin-top: 4px;

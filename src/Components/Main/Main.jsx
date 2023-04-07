@@ -2,7 +2,6 @@ import React from 'react';
 import { useEffect } from 'react';
 import { Outlet } from 'react-router-dom';
 import { useAppContext } from '../../hooks/useAppContext';
-import styles from './Main.css';
 
 export const Main = ({ themeClass }) => {
   const {
