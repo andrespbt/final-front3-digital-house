@@ -1,13 +1,13 @@
 # URL
 
-https://final-front3-digital-house-andrespbt.vercel.app/dentist/2
+https://final-front3-digital-house-andrespbt.vercel.app
 
 # Caracteristicas
 
 - Full responsive. Breakpoints 375px, 640px, 768px, 1200px.
-- Uso de axios para fetch de data.
 - Creacion de custom hooks para manejo del estado global y formulario contacto.
 - Testeos con diferentes complejidades.
+- Uso de axios para fetch de data.
 - Persistencia de datos en localStorage. Se puede agregar y eliminar favoritos.
 - Skeleton.
 - useReducer y useContext para manejo del contexto.
