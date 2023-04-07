@@ -3,7 +3,7 @@ import { globalReducer } from './globalReducer';
 
 export const initialState = {
   isFetching: false,
-  isDarkMode: false,
+  isDarkMode: true,
   data: [],
   favorites: JSON.parse(localStorage.getItem('odontoFavorites')) || [],
 };
