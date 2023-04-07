@@ -37,7 +37,7 @@ describe('Test on <Header  />', () => {
 
     fireEvent.click(themeButton);
 
-    expect(context.isDarkMode).toBeTruthy();
+    expect(screen.getByRole('banner').className).toBe('light header');
   });
 
   test('should render h1', () => {
