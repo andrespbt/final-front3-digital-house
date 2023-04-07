@@ -1,3 +1,18 @@
+# URL
+
+https://final-front3-digital-house-andrespbt.vercel.app/dentist/2
+
+# Caracteristicas
+
+- Full responsive. Breakpoints 375px, 640px, 768px, 1200px.
+- Uso de axios para fetch de data.
+- Creacion de custom hooks para manejo del estado global y formulario contacto.
+- Testeos con diferentes complejidades.
+- Persistencia de datos en localStorage. Se puede agregar y eliminar favoritos.
+- Skeleton.
+- useReducer y useContext para manejo del contexto.
+- Uso de la metodología BEM para nombrar las clases css.
+
 # ctd-fe3-final
 
 Examen Final de Frontend III
@@ -57,7 +72,6 @@ Los siguientes aspectos son extras al requisito mínimo de aprobación que será
 **Funcionalidad de destacados**
 
 - Se valorará funcionalidades extra a esta feature, como lo pueden ser el eliminar de destacadados, manejo de errores al intentar agregar repetidos y reseteo total de los destacados.
-
 
 **Estilos**
 
