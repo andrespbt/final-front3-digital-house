@@ -47,5 +47,6 @@ describe('Test on <Home />', () => {
     const cardsLength = screen.getAllByRole('generic', { name: 'dentistCard' }).length;
 
     expect(cardsLength).toBeGreaterThan(0);
+    expect(cardsLength).toBe(10);
   });
 });

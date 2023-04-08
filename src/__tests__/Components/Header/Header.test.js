@@ -33,9 +33,17 @@ describe('Test on <Header  />', () => {
 
     const themeButton = screen.getByRole('button', { name: 'themeButton' });
 
+    // Component should render
+
     expect(themeButton).toBeTruthy();
 
+    // Before click, class should be dark
+
+    expect(screen.getByRole('banner').className).toBe('dark header');
+
     fireEvent.click(themeButton);
+
+    // After click, class should be light
 
     expect(screen.getByRole('banner').className).toBe('light header');
   });
