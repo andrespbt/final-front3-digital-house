@@ -1,8 +1,6 @@
 import React from 'react';
-import { useAppContext } from '../../../hooks/useAppContext';
-import { Input } from './Input';
-import { Label } from './Label';
-import { useForm } from '../../../hooks/useForm';
+import { useAppContext, useForm } from '../../../hooks';
+import { Input, Label } from '.';
 
 const Form = ({ formValues, setFormValues }) => {
   const {

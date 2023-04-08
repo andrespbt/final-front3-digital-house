@@ -1,9 +1,9 @@
 .footer {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  height: 10vh;
+  display: flex;
   font-weight: 600;
+  height: 10vh;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {

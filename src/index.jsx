@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { childAppRoutes } from './Components/utils/childAppRoutes';
-import { ContextProvider } from './Components/utils/global.context';
+import { childAppRoutes, ContextProvider } from './Components/utils';
 
 const router = createBrowserRouter([
   {

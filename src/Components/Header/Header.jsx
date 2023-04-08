@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ListIcon } from '../icons';
 import { MenuModal, Navbar } from './';
-// import styles from './Header.css';
 
 export const Header = ({ themeClass }) => {
   const navigate = useNavigate();

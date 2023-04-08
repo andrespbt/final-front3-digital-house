@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardText } from './CardText';
+import { CardText } from '.';
 
 export const CardTextContainer = ({ textArray }) => {
   return (

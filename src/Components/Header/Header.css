@@ -13,8 +13,8 @@
 }
 
 .header__button {
-  border: none;
   background-color: transparent;
+  border: none;
 }
 
 .menu-modal {
@@ -34,10 +34,10 @@
 }
 
 .navbar {
-  justify-content: space-between;
   display: none;
-  gap: 1.2rem;
   font-weight: 700;
+  gap: 1.2rem;
+  justify-content: space-between;
 }
 
 .navbar a {
@@ -45,11 +45,11 @@
 }
 
 .menu-modal__theme-button {
-  border: none;
   background-color: transparent;
+  border: none;
   height: 16px;
-  width: 16px;
   margin: 0 auto 10px;
+  width: 16px;
 }
 
 .menu-modal__theme-button:hover {
@@ -100,8 +100,8 @@
 
   .menu-modal__theme-button {
     height: 25px;
-    width: 25px;
     margin-top: 4px;
+    width: 25px;
   }
 
   .navbar {

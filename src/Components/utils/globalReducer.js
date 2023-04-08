@@ -1,7 +1,6 @@
 export const globalReducer = (state, action) => {
   switch (action.type) {
     case 'CHANGE_THEME': {
-      
       return {
         ...state,
         isDarkMode: !state.isDarkMode,
@@ -28,23 +27,23 @@ export const globalReducer = (state, action) => {
         favorites: state.favorites.filter(fav => fav.id !== action.payload),
       };
     }
-    
+
     case 'START_FETCH': {
       return {
         ...state,
-        isFetching: true
-      }
+        isFetching: true,
+      };
     }
-    
+
     case 'FINISH_FETCH': {
       return {
         ...state,
-        isFetching: false
-      }
+        isFetching: false,
+      };
     }
 
     default: {
-      throw new Error(`La accion de tipo ${action.type} no existe.`);
+      throw new Error(`Action type ${action.type} doesn't exists.`);
     }
   }
 };

@@ -1,9 +1,8 @@
 import React from 'react';
 import { useAppContext } from '../../../hooks/useAppContext';
 import doctorImg from '../../../img/doctor.jpg';
-import { HeartFillIcon } from '../../icons/HeartFillIcon';
-import { HeartIcon } from '../../icons/HeartIcon';
-import { CardTextContainer } from './CardTextContainer';
+import { HeartFillIcon, HeartIcon } from '../../icons';
+import { CardTextContainer } from '.';
 
 const Card = ({ data, onClick, textArray, cardClass }) => {
   const { id } = data || '';

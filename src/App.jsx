@@ -1,6 +1,4 @@
-import { Footer } from './Components//Footer/Footer';
-import { Header } from './Components/Header';
-import { Main } from './Components/Main/Main';
+import { Footer, Header, Main } from './Components';
 import { useAppContext } from './hooks/useAppContext';
 
 function App() {
