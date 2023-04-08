@@ -53,14 +53,6 @@ label:hover {
   color: white;
 }
 
-.dark .navbar a.active {
-  color: #b1b1b1;
-}
-
-.light .navbar a.active {
-  color: #818181;
-}
-
 .light {
   background-color: var(--light-gray);
 }

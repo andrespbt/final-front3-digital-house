@@ -9,18 +9,21 @@ export const MenuModal = ({ themeClass, setIsModalOpen }) => {
   return (
     <div className={`menu-modal ${themeClass}`}>
       <NavLink
+        className={`${themeClass}`}
         to="/home"
         onClick={onLinkClick}
       >
         Home
       </NavLink>
       <NavLink
+        className={`${themeClass}`}
         to="/contact"
         onClick={onLinkClick}
       >
         Contact
       </NavLink>
       <NavLink
+        className={`${themeClass}`}
         to="/favs"
         onClick={onLinkClick}
       >

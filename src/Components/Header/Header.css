@@ -56,6 +56,22 @@
   cursor: pointer;
 }
 
+.dark .navbar a.active {
+  color: #b1b1b1;
+}
+
+.light .navbar a.active {
+  color: #818181;
+}
+
+.dark .menu-modal a.active {
+  color: #b1b1b1;
+}
+
+.light .menu-modal a.active {
+  color: #818181;
+}
+
 @media (min-width: 640px) {
   .header__button {
     display: none;
