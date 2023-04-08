@@ -1,0 +1,110 @@
+.form {
+  border-radius: 15px;
+  height: fit-content;
+  padding: 2rem;
+  width: 300px;
+}
+
+.form__fieldset {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  gap: 1rem;
+  text-align: center;
+}
+
+.input-container {
+  position: relative;
+}
+
+.form__input {
+  border-radius: 15px;
+  border: 1px solid var(--light-gray);
+  display: block;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__submit {
+  border-radius: 15px;
+  border: 0.1px solid;
+  display: block;
+  margin: 2rem auto 0 auto;
+  padding: 0.5rem;
+  width: 60%;
+}
+
+.form__submit:hover {
+  cursor: pointer;
+}
+
+.form__label {
+  text-align: left;
+}
+
+.form__legend {
+  margin-bottom: 20px;
+}
+
+.form__error-message--input {
+  color: red;
+  font-size: 12px;
+}
+
+.form__error-message {
+  color: red;
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.form__input--error {
+  border: 1px solid red;
+}
+
+.form__input--success {
+  border: 1px solid var(--success-green);
+}
+
+.form__input-icon {
+  position: absolute;
+  right: 15px;
+  top: 8px;
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .form {
+    font-size: 1.2rem;
+    width: 400px;
+  }
+
+  .form__legend {
+    font-size: 1.4rem;
+  }
+
+  .form__error-message--input {
+    font-size: 14px;
+  }
+
+  .form__error-message {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .form {
+    font-size: 1.2rem;
+    width: 400px;
+  }
+
+  .form__input {
+    font-size: 1rem;
+  }
+}
