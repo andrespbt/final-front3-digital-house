@@ -13,8 +13,8 @@
   --dark-gray: #3a3e42;
   --light-gray: #f1f1f1;
   --very-light-gray: #fafafa;
-  --skeleton-main: hsl(200, 20%, 80%);
-  --skeleton-secondary: hsl(200, 20%, 95%);
+  --skeleton-main: #c2cfd6;
+  --skeleton-secondary: #f0f3f5;
   --success-green: #03c503;
 }
 
@@ -52,8 +52,13 @@ label:hover {
   background-color: var(--very-dark-gray);
   color: white;
 }
-.dark > a {
-  color: white;
+
+.dark .navbar a.active {
+  color: #b1b1b1;
+}
+
+.light .navbar a.active {
+  color: #818181;
 }
 
 .light {
