@@ -1,6 +1,6 @@
 # URL
 
-https://final-front3-digital-house-andrespbt.vercel.app
+https://final-front3-digital-house.vercel.app
 
 # Caracteristicas
 
